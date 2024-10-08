@@ -1,0 +1,377 @@
+/* Global styles */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #121212;
+
+    color: #ffffff;
+
+    line-height: 1.6;
+
+    transition: all 0.5s ease;
+
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+/* Navigation */
+
+header {
+
+    background-color: #1f1f1f;
+
+    padding: 1rem;
+
+    position: fixed;
+
+    width: 100%;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+}
+
+.nav-list {
+
+    list-style-type: none;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.nav-list li {
+
+    margin: 0 20px;
+
+}
+
+.nav-list a {
+  font-size: 3.5rem;
+
+    color: #ffffff;
+
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+
+}
+
+.nav-list a:hover {
+   
+
+    color: #ff9800;
+
+}
+
+/* Home Section */
+
+.home {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    background-color: #1f1f1f;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+.intro h1 {
+
+    font-size: 6rem;
+
+    margin-bottom: 20px;
+
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+.intro p {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 30px;
+
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+
+/* Glowing button */
+
+.btn-glow {
+
+    padding: 10px 20px;
+
+    background-color: #ff9800;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: all 0.3s ease;
+
+}
+
+.btn-glow::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+
+    left: -5px;
+
+    right: -5px;
+
+    bottom: -5px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+
+    z-index: -1;
+
+    filter: blur(10px);
+
+    opacity: 0.7;
+
+    transition: opacity 0.3s ease;
+
+}
+
+.btn-glow:hover::before {
+
+    opacity: 1;
+
+}
+
+.btn-glow:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* Glowing border effect */
+
+.glow-border {
+
+    border: 2px solid #ff9800;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    transition: all 0.3s ease;
+
+}
+
+.glow-border::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -3px;
+
+    left: -3px;
+
+    right: -3px;
+
+    bottom: -3px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+
+    z-index: -1;
+
+    filter: blur(8px);
+
+    opacity: 0.6;
+
+    transition: opacity 0.3s ease;
+
+}
+
+.glow-border:hover::before {
+
+    opacity: 1;
+
+}
+
+/* About Section */
+
+.about, .projects, .contact {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+.about h2, .projects h2, .contact h2 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+
+/* Projects Section */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+}
+
+.project-card {
+
+    background-color: #282828;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    transition: transform 0.3s ease;
+
+}
+
+.project-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+/* Contact Section */
+
+.contact form {
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+}
+
+.contact form input, .contact form textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    background-color: #1f1f1f;
+
+    color: #ffffff;
+
+}
+
+/* Footer */
+
+footer {
+
+    background-color: #1f1f1f;
+
+    padding: 10px;
+
+    text-align: center;
+
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    
+
+.nav-list a {
+
+  font-size: 1rem;
+  }
+
+    .intro h1 {
+
+        font-size: 1.5rem;
+
+    }
+
+    .intro p {
+
+        font-size: 1.2rem;
+
+    }
+
+    .nav-list {
+
+        flex-direction: row;
+
+    }
+
+}
